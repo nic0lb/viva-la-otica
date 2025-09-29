@@ -1,0 +1,336 @@
+/* ======================================= */
+/* 1. VARIÁVEIS E RESET                   */
+/* ======================================= */
+:root {
+    --azul-intenso: #0a1f44;
+    --dourado-acento: #f5c542;
+    --texto-principal: #222;
+    --fundo-claro: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--texto-principal);
+    background-color: var(--fundo-claro);
+    line-height: 1.6;
+    /* Suaviza a rolagem para links internos */
+    scroll-behavior: smooth;
+}
+
+/* ======================================= */
+/* 2. NAVBAR E HEADER                     */
+/* ======================================= */
+.navbar {
+    background: var(--azul-intenso);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px; /* Ajustei de 2px para 1px para um visual mais limpo */
+    color: var(--dourado-acento);
+}
+
+.navbar nav a {
+    color: white;
+    margin-left: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--dourado-acento);
+}
+
+/* ======================================= */
+/* 3. HERO                                */
+/* ======================================= */
+.hero {
+    /* Ajustei a opacidade do gradient para garantir que o texto seja legível */
+    background: linear-gradient(rgba(10,31,68,0.85), rgba(10,31,68,0.85)), url("https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?auto=format&fit=crop&w=1950&q=80") center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+    /* Altura definida para melhor impacto visual */
+    min-height: 70vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem); /* Responsividade do título */
+    margin-bottom: 1rem;
+    color: white; /* Garante que o H1 mantenha a cor branca do hero */
+}
+
+.hero p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.hero .btn-gold,
+.hero .btn-outline {
+    padding: 0.8rem 1.6rem;
+    border-radius: 30px;
+    font-weight: 600;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s; /* Transição para todas as propriedades */
+}
+
+.btn-gold {
+    background: var(--dourado-acento);
+    border: none;
+    color: var(--azul-intenso);
+}
+
+.btn-gold:hover {
+    background: #d4a71c; /* Dourado mais escuro no hover */
+    transform: translateY(-2px); /* Efeito de elevação sutil */
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--dourado-acento);
+    color: var(--dourado-acento);
+}
+
+.btn-outline:hover {
+    background: var(--dourado-acento);
+    color: var(--azul-intenso);
+    transform: translateY(-2px);
+}
+
+/* ======================================= */
+/* 4. SECTIONS GERAIS                     */
+/* ======================================= */
+.section {
+    padding: 4rem 10%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--azul-intenso);
+    position: relative;
+}
+
+.section h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: var(--dourado-acento);
+    display: block;
+    margin: 0.5rem auto;
+    border-radius: 5px;
+}
+
+/* ======================================= */
+/* 5. MARCAS                              */
+/* ======================================= */
+.brands {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.brands span {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid var(--azul-intenso);
+    border-radius: 25px;
+    transition: all 0.3s;
+    cursor: pointer;
+    user-select: none; /* Evita seleção de texto */
+}
+
+.brands span:hover {
+    background: var(--azul-intenso);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ======================================= */
+/* 6. FEEDBACKS                           */
+/* ======================================= */
+.feedbacks {
+    /* O Grid já está responsivo, o que é ótimo! */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.feedbacks blockquote {
+    background: white;
+    padding: 1.5rem;
+    border-left: 5px solid var(--dourado-acento);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-style: italic;
+    text-align: left; /* Melhora a leitura do bloco de texto */
+}
+
+.feedbacks cite {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--azul-intenso);
+    text-align: right;
+}
+
+/* ======================================= */
+/* 7. INSTAGRAM FEED (Correção de Layout) */
+/* ======================================= */
+#instagram-feed {
+    background-color: white;
+}
+
+.instagram-posts-container {
+    /* Flexbox para alinhar os posts em tela grande */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Espaço entre os posts */
+    flex-wrap: wrap; /* Quebra para a próxima linha em telas pequenas */
+    margin-top: 30px;
+}
+
+/* Sobrescreve o estilo inline do Instagram para controlar o tamanho */
+.instagram-media {
+    max-width: 350px !important; /* Limite um tamanho razoável */
+    width: 100% !important;
+    margin: 0 !important;
+    /* Garante que o embed não use float e ocupe o espaço no flexbox */
+    float: none !important; 
+}
+
+
+/* ======================================= */
+/* 8. CONTATO E MAPAS                     */
+/* ======================================= */
+.contato {
+    background-color: #eee; /* Cor de fundo ligeiramente diferente para contraste */
+}
+
+.contato h3 {
+    color: var(--azul-intenso);
+    margin: 30px 0 15px 0;
+}
+
+.map-container {
+    margin: 30px auto;
+    max-width: 650px; /* Limita a largura do mapa */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+    /* Torna o iframe totalmente responsivo */
+    width: 100%;
+    height: 350px;
+    display: block;
+}
+
+.contato form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contato input,
+.contato textarea {
+    padding: 0.9rem;
+    border: 1px solid #ccc; /* Bordas mais suaves */
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contato input:focus,
+.contato textarea:focus {
+    border-color: var(--dourado-acento);
+    box-shadow: 0 0 0 2px rgba(245, 197, 66, 0.5); /* Sombra de foco dourada */
+    outline: none;
+}
+
+.contato button {
+    align-self: center;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 250px;
+}
+
+/* ======================================= */
+/* 9. RESPONSIVIDADE (MOBILE)             */
+/* ======================================= */
+@media (max-width: 768px) {
+    /* Navbar: Quebra e centraliza os links */
+    .navbar {
+        flex-direction: column;
+        padding: 1rem 5%;
+    }
+
+    .navbar nav {
+        margin-top: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction: column; /* Links em coluna no mobile */
+        gap: 10px;
+    }
+    
+    .navbar nav a {
+        margin: 0;
+    }
+
+    /* Ajuste de padding em seções no mobile */
+    .section {
+        padding: 3rem 5%;
+    }
+
+    /* Hero: Diminui o padding vertical */
+    .hero {
+        padding: 4rem 1rem;
+    }
+}
+
+/* ======================================= */
+/* 10. FOOTER                             */
+/* ======================================= */
+.footer {
+    background-color: var(--azul-intenso);
+    color: white;
+    padding: 2rem 5%;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 4px solid var(--dourado-acento);
+}
+
+.footer p {
+    margin: 0;
+}
