@@ -19,12 +19,11 @@ body {
     color: var(--texto-principal);
     background-color: var(--fundo-claro);
     line-height: 1.6;
-    /* Suaviza a rolagem para links internos */
     scroll-behavior: smooth;
 }
 
 /* ======================================= */
-/* 2. NAVBAR E HEADER                     */
+/* 2. NAVBAR E HEADER (com menu mobile)    */
 /* ======================================= */
 .navbar {
     background: var(--azul-intenso);
@@ -42,32 +41,49 @@ body {
 .navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    letter-spacing: 1px; /* Ajustei de 2px para 1px para um visual mais limpo */
+    letter-spacing: 1px;
     color: var(--dourado-acento);
 }
 
-.navbar nav a {
+/* Lista de links */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
     color: white;
-    margin-left: 2rem;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
-.navbar nav a:hover {
+.nav-links a:hover {
     color: var(--dourado-acento);
+}
+
+/* Botão hambúrguer */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 /* ======================================= */
 /* 3. HERO                                */
 /* ======================================= */
 .hero {
-    /* Ajustei a opacidade do gradient para garantir que o texto seja legível */
     background: linear-gradient(rgba(10,31,68,0.85), rgba(10,31,68,0.85)), url("https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?auto=format&fit=crop&w=1950&q=80") center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 6rem 2rem;
-    /* Altura definida para melhor impacto visual */
     min-height: 70vh; 
     display: flex;
     flex-direction: column;
@@ -76,9 +92,9 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(2rem, 5vw, 3rem); /* Responsividade do título */
+    font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 1rem;
-    color: white; /* Garante que o H1 mantenha a cor branca do hero */
+    color: white;
 }
 
 .hero p {
@@ -95,7 +111,7 @@ body {
     font-weight: 600;
     margin: 0.5rem;
     cursor: pointer;
-    transition: all 0.3s; /* Transição para todas as propriedades */
+    transition: all 0.3s;
 }
 
 .btn-gold {
@@ -105,8 +121,8 @@ body {
 }
 
 .btn-gold:hover {
-    background: #d4a71c; /* Dourado mais escuro no hover */
-    transform: translateY(-2px); /* Efeito de elevação sutil */
+    background: #d4a71c;
+    transform: translateY(-2px);
 }
 
 .btn-outline {
@@ -164,7 +180,7 @@ body {
     border-radius: 25px;
     transition: all 0.3s;
     cursor: pointer;
-    user-select: none; /* Evita seleção de texto */
+    user-select: none;
 }
 
 .brands span:hover {
@@ -177,7 +193,6 @@ body {
 /* 6. FEEDBACKS                           */
 /* ======================================= */
 .feedbacks {
-    /* O Grid já está responsivo, o que é ótimo! */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
@@ -190,7 +205,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     font-style: italic;
-    text-align: left; /* Melhora a leitura do bloco de texto */
+    text-align: left;
 }
 
 .feedbacks cite {
@@ -202,37 +217,33 @@ body {
 }
 
 /* ======================================= */
-/* 7. INSTAGRAM FEED (Correção de Layout) */
+/* 7. INSTAGRAM FEED                       */
 /* ======================================= */
 #instagram-feed {
     background-color: white;
 }
 
 .instagram-posts-container {
-    /* Flexbox para alinhar os posts em tela grande */
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 20px; /* Espaço entre os posts */
-    flex-wrap: wrap; /* Quebra para a próxima linha em telas pequenas */
+    gap: 20px;
+    flex-wrap: wrap;
     margin-top: 30px;
 }
 
-/* Sobrescreve o estilo inline do Instagram para controlar o tamanho */
 .instagram-media {
-    max-width: 350px !important; /* Limite um tamanho razoável */
+    max-width: 350px !important;
     width: 100% !important;
     margin: 0 !important;
-    /* Garante que o embed não use float e ocupe o espaço no flexbox */
-    float: none !important; 
+    float: none !important;
 }
-
 
 /* ======================================= */
 /* 8. CONTATO E MAPAS                     */
 /* ======================================= */
 .contato {
-    background-color: #eee; /* Cor de fundo ligeiramente diferente para contraste */
+    background-color: #eee;
 }
 
 .contato h3 {
@@ -242,14 +253,13 @@ body {
 
 .map-container {
     margin: 30px auto;
-    max-width: 650px; /* Limita a largura do mapa */
+    max-width: 650px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .map-container iframe {
-    /* Torna o iframe totalmente responsivo */
     width: 100%;
     height: 350px;
     display: block;
@@ -266,7 +276,7 @@ body {
 .contato input,
 .contato textarea {
     padding: 0.9rem;
-    border: 1px solid #ccc; /* Bordas mais suaves */
+    border: 1px solid #ccc;
     border-radius: 10px;
     font-size: 1rem;
     transition: border-color 0.3s, box-shadow 0.3s;
@@ -275,7 +285,7 @@ body {
 .contato input:focus,
 .contato textarea:focus {
     border-color: var(--dourado-acento);
-    box-shadow: 0 0 0 2px rgba(245, 197, 66, 0.5); /* Sombra de foco dourada */
+    box-shadow: 0 0 0 2px rgba(245, 197, 66, 0.5);
     outline: none;
 }
 
@@ -290,30 +300,34 @@ body {
 /* 9. RESPONSIVIDADE (MOBILE)             */
 /* ======================================= */
 @media (max-width: 768px) {
-    /* Navbar: Quebra e centraliza os links */
-    .navbar {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
         flex-direction: column;
-        padding: 1rem 5%;
-    }
-
-    .navbar nav {
-        margin-top: 15px;
+        background: var(--azul-intenso);
+        display: none;
         text-align: center;
-        display: flex;
-        flex-direction: column; /* Links em coluna no mobile */
-        gap: 10px;
-    }
-    
-    .navbar nav a {
-        margin: 0;
+        padding: 1rem 0;
     }
 
-    /* Ajuste de padding em seções no mobile */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
     .section {
         padding: 3rem 5%;
     }
 
-    /* Hero: Diminui o padding vertical */
     .hero {
         padding: 4rem 1rem;
     }
@@ -334,3 +348,8 @@ body {
 .footer p {
     margin: 0;
 }
+
+/* ======================================= */
+/* Extra Responsividade                    */
+/* ======================================= */
+@media (
