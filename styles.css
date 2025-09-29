@@ -76,7 +76,7 @@ body {
 /* 3. HERO                                */
 /* ======================================= */
 .hero {
-    background: linear-gradient(rgba(10,31,68,0.85), rgba(10,31,68,0.85)), url("https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?auto=format&fit=crop&w=1950&q=80") center/cover no-repeat;
+    background: linear-gradient(rgba(10,31,68,0.85), rgba(10,31,68,0.85)), url("Gemini_Generated_Image_mcvr7rmcvr7rmcvr") center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 6rem 2rem;
@@ -411,5 +411,6 @@ body {
         height: 30px;
     }
 }
+
 
 
