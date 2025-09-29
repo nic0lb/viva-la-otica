@@ -23,7 +23,7 @@ body {
 }
 
 /* ======================================= */
-/* 2. NAVBAR E HEADER (com menu mobile)    */
+/* 2. NAVBAR E HEADER                     */
 /* ======================================= */
 .navbar {
     background: var(--azul-intenso);
@@ -45,34 +45,30 @@ body {
     color: var(--dourado-acento);
 }
 
-/* Lista de links */
-.nav-links {
+.navbar nav ul {
     display: flex;
     gap: 2rem;
-}
-
-.nav-links li {
     list-style: none;
 }
 
-.nav-links a {
+.navbar nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.navbar nav ul li a:hover {
     color: var(--dourado-acento);
 }
 
-/* Botão hambúrguer */
+/* Botão hamburguer */
 .menu-toggle {
     display: none;
-    background: transparent;
-    border: none;
+    font-size: 1.5rem;
     color: white;
-    font-size: 2rem;
+    background: none;
+    border: none;
     cursor: pointer;
 }
 
@@ -94,14 +90,13 @@ body {
 .hero h1 {
     font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 1rem;
-    color: white;
 }
 
 .hero p {
     font-size: clamp(1rem, 2vw, 1.2rem);
     margin-bottom: 2rem;
-    opacity: 0.9;
     max-width: 600px;
+    opacity: 0.9;
 }
 
 .hero .btn-gold,
@@ -217,7 +212,7 @@ body {
 }
 
 /* ======================================= */
-/* 7. INSTAGRAM FEED                       */
+/* 7. INSTAGRAM FEED                      */
 /* ======================================= */
 #instagram-feed {
     background-color: white;
@@ -297,44 +292,7 @@ body {
 }
 
 /* ======================================= */
-/* 9. RESPONSIVIDADE (MOBILE)             */
-/* ======================================= */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        background: var(--azul-intenso);
-        display: none;
-        text-align: center;
-        padding: 1rem 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 0.5rem 0;
-    }
-
-    .section {
-        padding: 3rem 5%;
-    }
-
-    .hero {
-        padding: 4rem 1rem;
-    }
-}
-
-/* ======================================= */
-/* 10. FOOTER                             */
+/* 9. FOOTER                               */
 /* ======================================= */
 .footer {
     background-color: var(--azul-intenso);
@@ -350,44 +308,35 @@ body {
 }
 
 /* ======================================= */
-/* Extra Responsividade                    */
+/* 10. RESPONSIVIDADE (MOBILE & TABLET)   */
 /* ======================================= */
 @media (max-width: 1024px) {
-    .section {
-        padding: 3rem 7%;
-    }
+    .section { padding: 3rem 7%; }
+    .hero { min-height: 60vh; }
+    .hero h1 { font-size: 2.2rem; }
+}
 
-    .hero {
-        min-height: 60vh;
-    }
-
-    .hero h1 {
-        font-size: 2.2rem;
-    }
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; padding: 1rem 5%; }
+    .navbar nav { margin-top: 15px; display: none; flex-direction: column; gap: 10px; }
+    .navbar nav.active { display: flex; }
+    .navbar nav ul { flex-direction: column; gap: 10px; text-align: center; }
+    .navbar nav ul li a { margin: 0; }
+    .section { padding: 3rem 5%; }
+    .hero { padding: 4rem 1rem; }
 }
 
 @media (max-width: 480px) {
-    .hero .btn-gold,
-    .hero .btn-outline {
-        width: 100%;
-        max-width: 280px;
-    }
+    .hero .btn-gold, .hero .btn-outline { width: 100%; max-width: 280px; }
+    .section h2 { font-size: 1.6rem; }
+    .brands span { font-size: 1rem; padding: 0.4rem 0.8rem; }
+    .feedbacks blockquote { font-size: 0.95rem; }
+    .contato input, .contato textarea { font-size: 0.9rem; }
+}
 
-    .section h2 {
-        font-size: 1.6rem;
-    }
-
-    .brands span {
-        font-size: 1rem;
-        padding: 0.4rem 0.8rem;
-    }
-
-    .feedbacks blockquote {
-        font-size: 0.95rem;
-    }
-
-    .contato input,
-    .contato textarea {
-        font-size: 0.9rem;
-    }
+/* ======================================= */
+/* 11. MENU HAMBURGUE                     */
+/* ======================================= */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
 }
