@@ -337,6 +337,25 @@ body {
 /* ======================================= */
 /* 11. MENU HAMBURGUE                     */
 /* ======================================= */
-@media (max-width: 768px) {
-    .menu-toggle { display: block; }
+/* Correção no bloco @media (max-width: 768px) */
+
+.navbar nav { 
+    /* Mantenha a flex-direction: column e outros estilos */
+    margin-top: 15px; 
+    /* Remova o display: none/flex do .navbar nav se você for targetar o .nav-links */
 }
+
+.navbar .nav-links {
+    /* 1. Garante que a lista de links comece OCULTA no mobile */
+    display: none; 
+    
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.navbar .nav-links.active {
+    /* 2. O JS APENAS MOSTRA a lista quando a classe 'active' está presente */
+    display: flex;
+}
+
