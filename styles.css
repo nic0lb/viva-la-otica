@@ -352,4 +352,42 @@ body {
 /* ======================================= */
 /* Extra Responsividade                    */
 /* ======================================= */
-@media (
+@media (max-width: 1024px) {
+    .section {
+        padding: 3rem 7%;
+    }
+
+    .hero {
+        min-height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero .btn-gold,
+    .hero .btn-outline {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .section h2 {
+        font-size: 1.6rem;
+    }
+
+    .brands span {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .feedbacks blockquote {
+        font-size: 0.95rem;
+    }
+
+    .contato input,
+    .contato textarea {
+        font-size: 0.9rem;
+    }
+}
