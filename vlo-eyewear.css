@@ -1,0 +1,168 @@
+/* Variáveis consistentes com a marca */
+:root {
+    --azul-intenso: #0a1f44;
+    --dourado-acento: #d4af37;
+    --texto-principal: #2c2c2c;
+    --fundo-offwhite: #fcfcfc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--texto-principal);
+    background-color: var(--fundo-offwhite);
+    line-height: 1.8;
+}
+
+/* Navegação de Volta */
+.back-nav {
+    position: absolute;
+    top: 30px;
+    left: 5%;
+    z-index: 10;
+}
+
+.back-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    transition: all 0.3s;
+}
+
+.back-nav a:hover {
+    color: var(--dourado-acento);
+    border-color: var(--dourado-acento);
+}
+
+/* Hero Section */
+.hero-vlo {
+    height: 60vh;
+    background: linear-gradient(rgba(10, 31, 68, 0.7), rgba(10, 31, 68, 0.7)), 
+                url('https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=2080&auto=format&fit=crop') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-vlo .subtitle {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: var(--dourado-acento);
+}
+
+.hero-vlo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    margin-bottom: 1rem;
+}
+
+/* Layout do Conteúdo */
+.vlo-container {
+    max-width: 1200px;
+    margin: -50px auto 0; /* Sobe um pouco sobre o hero */
+    padding: 0 5%;
+}
+
+.story {
+    background: white;
+    padding: 4rem;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--azul-intenso);
+}
+
+.story p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.image-placeholder {
+    background: #eee;
+    height: 400px;
+    width: 100%;
+    background: url('https://images.unsplash.com/photo-1508243629442-96c0d1e6d61d?q=80&w=2070&auto=format&fit=crop') center/cover;
+}
+
+/* Grid de Missão/Visão/Valores */
+.vlo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.grid-card {
+    padding: 3rem 2rem;
+    background: white;
+    border-top: 3px solid var(--dourado-acento);
+    transition: transform 0.3s;
+}
+
+.grid-card:hover {
+    transform: translateY(-10px);
+}
+
+.grid-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--azul-intenso);
+}
+
+/* Footer */
+.vlo-footer {
+    padding: 4rem 5%;
+    background: var(--azul-intenso);
+    color: white;
+    text-align: center;
+}
+
+.btn-minimal {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--dourado-acento);
+    text-decoration: none;
+    border: 1px solid var(--dourado-acento);
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+}
+
+.btn-minimal:hover {
+    background: var(--dourado-acento);
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .story {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+    .hero-vlo h1 { font-size: 3rem; }
+}
