@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Viva La Ótica</title>
+  <meta name="description" content="Viva La Ótica - Óculos premium, lentes de alta tecnologia e atendimento personalizado em Fortaleza. Agende sua avaliação gratuita.">
+  <title>Viva La Ótica | Estilo e Qualidade em Óculos</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- ================= NAVBAR ================= -->
+
   <header class="navbar">
     <div class="logo">Viva La Ótica</div>
 
-    <!-- Botão hambúrguer -->
-    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="main-nav">
+      ☰
+    </button>
 
-    <nav>
+    <nav id="main-nav">
       <ul class="nav-links">
         <li><a href="#marcas">Marcas</a></li>
         <li><a href="#depoimentos">Feedbacks</a></li>
@@ -24,100 +29,114 @@
     </nav>
   </header>
 
-  <!-- ================= HERO ================= -->
   <section id="inicio" class="hero">
     <div class="hero-content">
-      <h1>Sofisticação que realça o seu olhar</h1>
-      <p>Óculos premium, atendimento personalizado e lentes com tecnologia de ponta.</p>
-      <div class="hero-buttons">
-        <button class="btn-gold">Ver Catálogo</button>
-        <button class="btn-outline" onclick="window.location.href='#instagram-feed'">Instagram</button>
+      <span class="reveal">Excelência Visual</span>
+      <h1 class="reveal">Viva o estilo e a qualidade na Viva La Ótica</h1>
+      <p class="reveal">Óculos premium, atendimento personalizado e lentes com tecnologia de ponta para sua visão.</p>
+      <div class="hero-buttons reveal">
+        <a href="#marcas" class="btn-gold">Ver Catálogo</a>
+        <a href="#instagram-feed" class="btn-outline">Instagram</a>
+        <a href="vlo-eyewear.html" class="btn-gold">Conheça a VLO Eyewear</a>
       </div>
     </div>
   </section>
 
-  <!-- ================= MARCAS ================= -->
-  <section id="marcas" class="section">
-    <h2>Marcas que trabalhamos</h2>
+  <section id="marcas" class="section reveal">
+    <h2>Marcas parceiras</h2>
     <div class="brands">
-      <span>Ray-Ban</span>
-      <span>Prada</span>
-      <span>Oakley</span>
-      <span>Vogue</span>
-      <span>Gucci</span>
+      <ul class="brands-list">
+        <li>VLO Eyewear</li>
+        <li>Colcci</li>
+        <li>Mormaii</li>
+        <li>Calvin Klein</li>
+        <li>Reserva</li>
+        <li>John John</li>
+        <li>Armani Exchange</li>
+      </ul>
     </div>
   </section>
 
-  <!-- ================= FEEDBACKS ================= -->
-  <section id="depoimentos" class="section">
+  <section id="depoimentos" class="section testimonials reveal">
     <h2>O que nossos clientes dizem</h2>
     <div class="feedbacks">
-      <blockquote>“Atendimento impecável e muita variedade de armações.” <cite>- Ana P.</cite></blockquote>
-      <blockquote>“Achei modelos exclusivos e o consultor me ajudou a encontrar o óculos ideal.” <cite>- Rafael M.</cite></blockquote>
-      <blockquote>“Entrega rápida e embalagem premium. Já indiquei pra família inteira!” <cite>- Bianca S.</cite></blockquote>
+      <article>
+        <blockquote>“Atendimento impecável e muita variedade de armações.”</blockquote>
+        <cite>- Ana P.</cite>
+      </article>
+      <article>
+        <blockquote>“Achei modelos exclusivos e o consultor me ajudou a encontrar o óculos ideal.”</blockquote>
+        <cite>- Rafael M.</cite>
+      </article>
+      <article>
+        <blockquote>“Entrega rápida e embalagem premium. Já indiquei pra família inteira!”</blockquote>
+        <cite>- Bianca S.</cite>
+      </article>
     </div>
   </section>
 
-  <!-- ================= INSTAGRAM ================= -->
-  <section id="instagram-feed" class="section">
+  <section id="instagram-feed" class="section reveal">
     <h2>Acompanhe nossas novidades!</h2>
     <div class="instagram-posts-container"> 
       <blockquote class="instagram-media" 
         data-instgrm-captioned 
-        data-instgrm-permalink="https://www.instagram.com/p/DNfvmwHuD5P/?utm_source=ig_embed&utm_campaign=loading" 
+        data-instgrm-permalink="https://www.instagram.com/p/DNfvmwHuD5P/" 
         data-instgrm-version="14">
       </blockquote>
-
       <blockquote class="instagram-media" 
         data-instgrm-captioned 
-        data-instgrm-permalink="https://www.instagram.com/reel/DOJj-2JCRXq/?utm_source=ig_embed&utm_campaign=loading" 
+        data-instgrm-permalink="https://www.instagram.com/reel/DOJj-2JCRXq/" 
         data-instgrm-version="14">
       </blockquote>
     </div>
-    <script async src="//www.instagram.com/embed.js"></script>
+    <script async src="https://www.instagram.com/embed.js"></script>
   </section>
 
-  <!-- ================= CONTATO ================= -->
-  <section id="contato" class="section contato">
+  <section id="contato" class="section contato reveal">
     <h2>Agende sua avaliação gratuita</h2>
     <p>Fale com um especialista e descubra a armação perfeita para seu estilo.</p>
 
-    <h3>Nossa Localização</h3>
     <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127441.25811342655!2d-38.60655457319699!3d-3.7318621453473114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74c3f464c783f%3A0x463b8686d8031d24!2sFortaleza%2C%20CE!5e0!3m2!1spt-BR!2sbr!4v1700000000000" 
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
     </div>
 
-          <!-- Botão flutuante do WhatsApp -->
-    <a href="https://api.whatsapp.com/send?phone=5585988163391&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o%20gratuita!"
+    <a href="https://wa.me/5585988163391?text=Olá!%20Gostaria%20de%20agendar%20minha%20avaliação%20gratuita."
       class="whatsapp-float"
       target="_blank"
+      rel="noopener noreferrer"
       aria-label="Fale conosco pelo WhatsApp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" style="width: 35px; height: 35px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Ícone do WhatsApp">
     </a>
 
-    <form id="formContato">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+    <form id="formContato" action="https://formspree.io/f/xvzbweje" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+      </div>
 
-      <label for="telefone">Telefone:</label>
-      <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone" required />
+      <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(85) 90000-0000" required />
+      </div>
 
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" placeholder="Como podemos ajudar?" required></textarea>
+      <div class="form-group">
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Como podemos ajudar?" required></textarea>
+      </div>
 
-      <button type="submit" class="btn-gold">Enviar</button>
+      <input type="text" name="_gotcha" style="display:none" />
+
+      <button type="submit" class="btn-gold">Enviar Mensagem</button>
     </form>
   </section>
 
-  <!-- ================= FOOTER ================= -->
   <footer class="footer">
-    <p>&copy; 2025 Viva La Ótica - Todos os direitos reservados.</p>
+    <p>© 2025 Viva La Ótica - Todos os direitos reservados.</p>
+    <p><a href="mailto:vivalaotica@gmail.com">vivalaotica@gmail.com</a></p>
   </footer>
 
-  <!-- ================= SCRIPTS ================= -->
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
